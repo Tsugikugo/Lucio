@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public float ForwardMovement = 5;
     public float UpwardMovement = 5;
     public int JumpCount = 0;
+    public GameManager gameManager;
 
     private void Start()
     {
@@ -30,5 +31,14 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, UpwardMovement);
             JumpCount++;
         }
+//  Death limit
+        if(rb.position.y < -5)
+        {
+            gameManager.GameOver();
+        }
+
+
     }
+
+
 }
