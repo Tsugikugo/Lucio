@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Buttons : MonoBehaviour
+public class RetryButton : MonoBehaviour
 {
-    void Retry()
+    public void Retry()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
